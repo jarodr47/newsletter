@@ -48,7 +48,7 @@ app.post("/", function (req,res) {
         
         response.on("data", function(data) {
             let parsedData = JSON.parse(data);
-            console.log(parsedData.total_created);
+            console.log(parsedData);
         })
     })
 
