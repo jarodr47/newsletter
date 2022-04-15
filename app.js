@@ -32,10 +32,10 @@ app.post("/", function (req,res) {
 
     let jsonData = JSON.stringify(data);
 
-    const url = "https://us14.api.mailchimp.com/3.0/lists/b997b5a574"
+    const url = "https://us14.api.mailchimp.com/3.0/lists/<listID here>>"
     const options = {
         method: "POST",
-        auth: "anyuser13:14a277ff71cb908435f6b1aa1cac02ad-us14"
+        auth: "<apikey here>"
     }
 
     const request = https.request(url, options, function(response) {
