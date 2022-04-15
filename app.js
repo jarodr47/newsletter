@@ -46,10 +46,10 @@ app.post("/", function (req,res) {
             res.sendFile(__dirname+"/failure.html");
         }
         
-        response.on("data", function(data) {
-            let parsedData = JSON.parse(data);
-            console.log(parsedData);
-        })
+        // response.on("data", function(data) {
+        //     let parsedData = JSON.parse(data);
+        //     console.log(parsedData);
+        // })
     })
 
     request.write(jsonData);
@@ -61,6 +61,4 @@ app.post("/failure", function(req, res) {
     res.sendFile(__dirname+"/signup.html");
 })
 
-app.listen(process.env.PORT || 3000, function () {
-    console.log("starting server on port 3000");
-})
+app.listen(process.env.PORT || 3000);
