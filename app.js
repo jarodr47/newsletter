@@ -44,15 +44,14 @@ app.post("/", function (req,res) {
         console.log(options.auth);
         if (response.statusCode === 200) {
             res.sendFile(__dirname+"/success.html");
-            console.log(apiKey);
         } else {
             res.sendFile(__dirname+"/failure.html");
         }
         
-        response.on("data", function(data) {
-            let parsedData = JSON.parse(data);
-            console.log(parsedData);
-        })
+        // response.on("data", function(data) {
+        //     let parsedData = JSON.parse(data);
+        //     console.log(parsedData);
+        // })
     })
 
     request.write(jsonData);
