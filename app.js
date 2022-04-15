@@ -44,6 +44,7 @@ app.post("/", function (req,res) {
         console.log(options.auth);
         if (response.statusCode === 200) {
             res.sendFile(__dirname+"/success.html");
+            console.log(apiKey);
         } else {
             res.sendFile(__dirname+"/failure.html");
         }
